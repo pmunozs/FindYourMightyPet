@@ -1,1 +1,34 @@
 // Specific CSS for your home-page
+
+$white: #fff;
+
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('https://picfiles.alphacoders.com/356/thumb-1920-356009.jpg');
+  background-position: top;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  background-attachment: fixed;
+}
+
+.banner-intro {
+  position: absolute;
+  margin: auto auto;
+  width: 50%;
+  padding: 35px 30px;
+  top: 25%;
+  left: 25%;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.banner h2 {
+
+  color: $white;
+  font-weight: bold;
+}
+
+.banner p {
+
+  color: $white;
+}
