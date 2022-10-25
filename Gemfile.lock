@@ -82,6 +82,9 @@ GEM
     bindex (0.8.1)
     bootsnap (1.13.0)
       msgpack (~> 1.2)
+    bootstrap-sass (3.4.1)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 2.0.0)
     builder (3.2.4)
     capybara (3.37.1)
       addressable
@@ -110,6 +113,8 @@ GEM
       railties (>= 3.2)
     erubi (1.11.0)
     execjs (2.8.1)
+    faker (2.23.0)
+      i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
     font-awesome-sass (6.2.0)
       sassc (~> 2.0)
@@ -145,6 +150,8 @@ GEM
     net-smtp (0.3.2)
       net-protocol
     nio4r (2.5.8)
+    nokogiri (1.13.9-x86_64-darwin)
+      racc (~> 1.4)
     nokogiri (1.13.9-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
@@ -242,15 +249,18 @@ GEM
     zeitwerk (2.6.1)
 
 PLATFORMS
+  x86_64-darwin-20
   x86_64-linux
 
 DEPENDENCIES
   autoprefixer-rails
   bootsnap
+  bootstrap-sass
   capybara
   debug
   devise
   dotenv-rails
+  faker
   font-awesome-sass (~> 6.1)
   jbuilder
   jsbundling-rails
