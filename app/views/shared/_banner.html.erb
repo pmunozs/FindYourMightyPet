@@ -1,20 +1,8 @@
-
-<div class="cover mb-4 d-flex align-items-center justify-content-center">
-  <div class="text-center text-white">
-    <h1>Adopt a mighty creature</h1>
-    <h3 class="typed-js" data-controller="typed-js"></h3>
-  </div>
-</div>
-<div class="container py-5">
-  <div class="d-flex align-items-center justify-content-between mb-3">
-    <h3 class="mb-0">Mighty creatures</h3>
-    <%= link_to "Add a creature", new_creature_path, class: "btn btn-flat" %>
-  </div>
+<div class="container mt-4">
   <div class="row">
-
-    <div class="col-sm d-flex justify-content-between d-flex flex-wrap">
-      <% @creatures.each do |creature| %>
-        <div class="card co-12 col-sm-6 col-md-4 mb-3">
+    <div class="col-sm col-4 d-flex justify-content-between">
+        <% @creatures.first(3).each do |creature| %>
+            <div class="card m-4 w-100">
                 <img class="card-img-top" src="https://images4.fanpop.com/image/photos/20500000/DraGon-dragons-20577400-984-689.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">
@@ -32,15 +20,8 @@
                         <%= creature.description %>
                     </small>                
                 </div>
-          </div>      
+            </div>      
         <% end %>
+    </div>
   </div>
-</div>
-<div class="container">
-  <header>
-    <h2>Creatures</h2>
-  </header>
-  <% @creatures.each do |creature| %>
-    <% creature.name %>
-  <% end %>
 </div>
