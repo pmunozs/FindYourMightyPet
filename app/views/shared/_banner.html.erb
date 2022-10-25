@@ -1,10 +1,9 @@
-<div class="container mt-4">
-  <div class="row" id="creatures">
-    <div class="col-sm">
+<div class="container mt-4 display: flex">
+  <div class="row align-content: space-between;">
+    <div class="col-sm col-4">
         <div class="card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <% @creatures.each do |creature| %>
-                <%= render creature %>
+            <% @creatures.first(3).each do |creature| %>
+                <img class="card-img-top" src="..." alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">
                         <%= creature.name %>
@@ -18,7 +17,7 @@
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">
-                        <%= creature.statut %>
+                        <%= creature.description %>
                     </small>                
                 </div>
             <% end %>

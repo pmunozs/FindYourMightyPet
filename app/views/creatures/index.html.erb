@@ -10,14 +10,28 @@
     <%= link_to "Add a creature", new_creature_path, class: "btn btn-flat" %>
   </div>
   <div class="row">
-    <% @creatures.each do |creature| %>
-      <div class="co-12 col-sm-6 col-md-4 mb-3">
-        <%= link_to creature_path(creature), class:"text-decoration-none" do %>
-          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('list_background.jpg') %>)">
-            <%= creature.name %>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
+
+    <div class="col-sm col-4">
+        <div class="card">
+            <% @creatures.each do |creature| %>
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= creature.name %>
+                    </h5>                    
+                    <p class="card-text">
+                        <%= creature.age %>
+                    </p>
+                    <p class="card-text">
+                        <%= creature.ability %>
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">
+                        <%= creature.description %>
+                    </small>                
+                </div>
+            <% end %>
+        </div>      
   </div>
 </div>
