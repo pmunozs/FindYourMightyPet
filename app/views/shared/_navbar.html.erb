@@ -14,12 +14,17 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Users
+          Profile
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <li><%= link_to "Login", new_user_session_path, class: "dropdown-item" %></li>
-          <li><%= link_to "Signup", new_user_registration_path, class: "dropdown-item" %></li>
-          <li><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %></li>
+
+          <% if user_signed_in? %>
+            <li><%= link_to "Profile", root_path, class: "dropdown-item" %></li>
+            <li><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %></li>
+          <% else  %>
+            <li><%= link_to "Login", new_user_session_path, class: "dropdown-item" %></li>
+            <li><%= link_to "Signup", new_user_registration_path, class: "dropdown-item" %></li>
+          <% end %>
         </ul>
       </li>
     </ul>
