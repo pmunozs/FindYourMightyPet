@@ -11,10 +11,10 @@
   </div>
   <div class="row">
 
-    <div class="col-sm col-4">
-        <div class="card">
-            <% @creatures.each do |creature| %>
-                <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="col-sm d-flex justify-content-between d-flex flex-wrap">
+      <% @creatures.each do |creature| %>
+        <div class="card co-12 col-sm-6 col-md-4 mb-3">
+                <img class="card-img-top" src="https://images4.fanpop.com/image/photos/20500000/DraGon-dragons-20577400-984-689.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">
                         <%= creature.name %>
@@ -31,7 +31,7 @@
                         <%= creature.description %>
                     </small>                
                 </div>
-            <% end %>
-        </div>      
+          </div>      
+        <% end %>
   </div>
 </div>

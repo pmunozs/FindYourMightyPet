@@ -1,9 +1,9 @@
-<div class="container mt-4 display: flex">
-  <div class="row align-content: space-between;">
-    <div class="col-sm col-4">
-        <div class="card">
-            <% @creatures.first(3).each do |creature| %>
-                <img class="card-img-top" src="..." alt="Card image cap">
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-sm col-4 d-flex justify-content-between">
+        <% @creatures.first(3).each do |creature| %>
+            <div class="card m-4 w-100">
+                <img class="card-img-top" src="https://images4.fanpop.com/image/photos/20500000/DraGon-dragons-20577400-984-689.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">
                         <%= creature.name %>
@@ -20,8 +20,8 @@
                         <%= creature.description %>
                     </small>                
                 </div>
-            <% end %>
-        </div>      
+            </div>      
+        <% end %>
     </div>
   </div>
 </div>
