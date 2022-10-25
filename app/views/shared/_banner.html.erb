@@ -1,19 +1,19 @@
 <div class="container mt-4">
-  <div class="row">
-
- <div class="col-sm">
-            <div class="card">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <% @creatures.first(3).each do |creature| %>
+  <div class="row" id="creatures">
+    <div class="col-sm">
+        <div class="card">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <% @creatures.each do |creature| %>
+                <%= render creature %>
                 <div class="card-body">
                     <h5 class="card-title">
-                    <%= creature.name %>
+                        <%= creature.name %>
                     </h5>                    
                     <p class="card-text">
-                    <%= creature.age %>
+                        <%= creature.age %>
                     </p>
-                     <p class="card-text">
-                    <%= creature.ability %>
+                    <p class="card-text">
+                        <%= creature.ability %>
                     </p>
                 </div>
                 <div class="card-footer">
@@ -21,8 +21,8 @@
                         <%= creature.statut %>
                     </small>                
                 </div>
-                <% end %>
-            </div>      
-        </div>
+            <% end %>
+        </div>      
+    </div>
   </div>
 </div>
