@@ -1,3 +1,23 @@
-<% @creatures.each do |creature| %>
-  <% creature.name %>
-<% end %>
+<div class="cover mb-4 d-flex align-items-center justify-content-center">
+  <div class="text-center text-white">
+    <h1>Adopt a mighty creature</h1>
+    <h3 class="typed-js" data-controller="typed-js"></h3>
+  </div>
+</div>
+<div class="container py-5">
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h3 class="mb-0">Mighty creatures</h3>
+    <%= link_to "Add a creature", new_creature_path, class: "btn btn-flat" %>
+  </div>
+  <div class="row">
+    <% @creatures.each do |creature| %>
+      <div class="co-12 col-sm-6 col-md-4 mb-3">
+        <%= link_to creature_path(creature), class:"text-decoration-none" do %>
+          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('list_background.jpg') %>)">
+            <%= creature.name %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
