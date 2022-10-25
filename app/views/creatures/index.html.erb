@@ -1,3 +1,4 @@
+
 <div class="cover mb-4 d-flex align-items-center justify-content-center">
   <div class="text-center text-white">
     <h1>Adopt a mighty creature</h1>
@@ -34,4 +35,12 @@
           </div>      
         <% end %>
   </div>
+</div>
+<div class="container">
+  <header>
+    <h2>Creatures</h2>
+  </header>
+  <% @creatures.each do |creature| %>
+    <% creature.name %>
+  <% end %>
 </div>
