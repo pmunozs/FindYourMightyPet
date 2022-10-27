@@ -16,6 +16,10 @@ class CreaturesController < ApplicationController
       puts "Fatal error my friend"    
     end
   end
+  
+  def show
+    @creature = Creature.find(params[:id])
+  end
 
   def destroy
     Creature.destroy
@@ -27,5 +31,4 @@ class CreaturesController < ApplicationController
   def creature_params
     params.require(:creature).permit(:name, :age, :ability, :description)
   end
-
 end
