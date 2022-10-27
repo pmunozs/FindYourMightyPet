@@ -10,6 +10,7 @@ class CreaturesController < ApplicationController
 
   def adopt
     @user = current_user
-    raise
+    @creature = Creature.find(params[:creature_id])
+    @creature.user = @user
   end
 end
