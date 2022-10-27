@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   get "about", to: "pages#about"
   devise_for :users
   resources :creatures do
-    get "adopt", to: "creature#adopt"
+    get "adopt", to: "creatures#adopt"
   end
 end
