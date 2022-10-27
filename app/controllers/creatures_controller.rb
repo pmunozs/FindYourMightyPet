@@ -37,4 +37,5 @@ class CreaturesController < ApplicationController
   def creature_params
     params.require(:creature).permit(:name, :age, :ability, :description)
   end
+
 end
