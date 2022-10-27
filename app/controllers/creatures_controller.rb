@@ -25,10 +25,15 @@ class CreaturesController < ApplicationController
     Creature.destroy
     redirect_to creatures_path 
   end
-
+  
+  def adopt
+    @user = current_user
+    @creature = Creature.find(params[:creature_id])
+    @creature.user = @user
+  end
+  
   private
 
-  def creature_params
+def creature_params
     params.require(:creature).permit(:name, :age, :ability, :description)
-  end
 end

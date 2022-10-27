@@ -1,3 +1,5 @@
 <h2><%= @creature.name %></h2>
 <p><%= @creature.age %></p>
 <p><%= @creature.ability %></p>
+
+<%= link_to "Adopt!", creature_adopt_path(@creature) %>
