@@ -7,4 +7,9 @@ class CreaturesController < ApplicationController
   def show
     @creature = Creature.find(params[:id])
   end
+
+  def adopt
+    @user = current_user
+    raise
+  end
 end
