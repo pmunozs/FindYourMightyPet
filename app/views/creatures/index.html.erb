@@ -8,24 +8,26 @@
       <% @creatures.each do |creature| %>
         <div class="card co-12 col-sm-6 col-md-4 mb-3">
           <%= link_to creature_path(creature) do %>
-          <img class="card-img-top" src="https://source.unsplash.com/500x500/?<%= creature.name %>, scary" alt="Card image cap">
-          <div class="card-body">
-              <h5 class="card-title">
-                  <%= creature.name %>
-              </h5>
-              <p class="card-text">
-                  <%= creature.age %>
-              </p>
-              <p class="card-text">
-                  <%= creature.ability %>
-              </p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">
-                <%= creature.description %>
-            </small>
-          </div>
-        <% end %>
+            <img class="card-img-top" src="https://source.unsplash.com/500x500/?<%= creature.name %>, scary" alt="Card image cap" />
+            <div class="card-body">
+                <h5 class="card-title">
+                    <%= creature.name %>
+                </h5>
+                <p class="card-text">
+                    <strong>Age: </strong>
+                    <%= creature.age %>
+                </p>
+                <p class="card-text">
+                    <strong>Ability: </strong>
+                    <%= creature.ability %>
+                </p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">
+                  <%= creature.description %>
+              </small>
+            </div>
+          <% end %>
       </div>
     <% end %>
   </div>
