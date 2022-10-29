@@ -13,11 +13,11 @@ class CreaturesController < ApplicationController
     @creature.user = current_user
     if @creature.save
       redirect_to creatures_path
-    else 
-      puts "Fatal error my friend"    
+    else
+      puts "Fatal error my friend"
     end
   end
-  
+
   def show
     @creature = Creature.find(params[:id])
   end
@@ -46,17 +46,17 @@ class CreaturesController < ApplicationController
       "Can't do that"
     end
   end
-  
+
   def adopt
     @user = current_user
     @creature = Creature.find(params[:creature_id])
     @creature.user = @user
   end
-  
+
   private
 
   def creature_params
-      params.require(:creature).permit(:name, :age, :ability, :description)
+    params.require(:creature).permit(:name, :age, :ability, :description)
   end
 
 end

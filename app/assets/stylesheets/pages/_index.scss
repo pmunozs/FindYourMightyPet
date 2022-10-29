@@ -1,2 +1,10 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "about";
+
+.cover {
+  background-color: #197278;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
