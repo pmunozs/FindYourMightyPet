@@ -4,5 +4,7 @@
   <p><strong>Age: </strong><%= @creature.age %></p>
   <p><strong>Ability: </strong><%= @creature.ability %></p>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, molestias. Laborum, nisi. Aliquid sunt porro molestiae, saepe quis quod accusamus distinctio accusantium eius ex facilis qui officia, nulla tenetur amet!</p>
-  <%= link_to "Back", creatures_path %>
+  <%= link_to "Adopt!", creature_adopt_path(@creature), class: "btn-rainbow" %>
+  <%= link_to "Back", creatures_path, class: "btn btn-danger" %>
 </div>
+
