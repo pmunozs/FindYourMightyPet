@@ -12,9 +12,6 @@
   <div class="row">
     <div class="col index-col">
       <% @creatures.each do |creature| %>
-
-        <div class="card co-12 col-sm-6 col-md-4 mb-3">
-
         <%= link_to creature_path(creature), class:"link" do %>
           <div class="creature-card">
             <img class="card-img-top" src="https://source.unsplash.com/400x400/?<%= creature.name %>, scary" alt="Card image cap">
