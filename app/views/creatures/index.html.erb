@@ -1,47 +1,35 @@
-<div class="cover mb-4 d-flex align-items-center justify-content-center">
-  <div class="text-center text-white">
-    <h1>Adopt a mighty creature</h1>
-    <h3 class="typed-js" data-controller="typed-js"></h3>
-  </div>
-</div>
 <div class="container py-5">
   <div class="d-flex align-items-center justify-content-between mb-3">
-    <h3 class="mb-0">Mighty creatures</h3>
-    <%= link_to "Add a creature", new_creature_path, class: "btn btn-flat" %>
+    <h3 class="mb-0">Current creatures</h3>
+    <%= link_to "Add a creature", new_creature_path, class: "btn btn-info text-white" %>
   </div>
   <div class="row">
     <div class="col-sm d-flex justify-content-between d-flex flex-wrap">
       <% @creatures.each do |creature| %>
-        <%= link_to creature_path(creature) do %>
         <div class="card co-12 col-sm-6 col-md-4 mb-3">
-        <img class="card-img-top" src="https://images4.fanpop.com/image/photos/20500000/DraGon-dragons-20577400-984-689.jpg" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">
-                <%= creature.name %>
-            </h5>
-            <p class="card-text">
-                <%= creature.age %>
-            </p>
-            <p class="card-text">
-                <%= creature.ability %>
-            </p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">
-              <%= creature.description %>
-          </small>
-        </div>
-        <% end %>
+          <%= link_to creature_path(creature) do %>
+            <img class="card-img-top" src="https://source.unsplash.com/500x500/?<%= creature.name %>, scary" alt="Card image cap" />
+            <div class="card-body">
+                <h5 class="card-title">
+                    <%= creature.name %>
+                </h5>
+                <p class="card-text">
+                    <strong>Age: </strong>
+                    <%= creature.age %>
+                </p>
+                <p class="card-text">
+                    <strong>Ability: </strong>
+                    <%= creature.ability %>
+                </p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">
+                  <%= creature.description %>
+              </small>
+            </div>
+          <% end %>
       </div>
-
     <% end %>
   </div>
-</div>
-<div class="container">
-  <header>
-    <h2>Creatures</h2>
-  </header>
-  <% @creatures.each do |creature| %>
-    <% creature.name %>
-  <% end %>
+  </div>
 </div>
