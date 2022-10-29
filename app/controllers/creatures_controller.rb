@@ -10,6 +10,7 @@ class CreaturesController < ApplicationController
 
   def create
     @creature = Creature.new(creature_params)
+    @creature.user = current_user
     if @creature.save
       redirect_to creatures_path
     else
@@ -21,9 +22,29 @@ class CreaturesController < ApplicationController
     @creature = Creature.find(params[:id])
   end
 
+  def edit
+    @creature = Creature.find(params[:id])
+    if @creature.user == current_user
+    else
+      puts "Can't do that"
+      redirect_to creatures_path 
+    end
+  end
+
+  def update
+    @creature = Creature.find(params[:id])
+    @creature.update(creature_params)
+    redirect_to creature_path(@creature)
+  end
+
   def destroy
-    Creature.destroy
-    redirect_to creatures_path
+    @creature = Creature.find(params[:id])
+    if @creature.user == current_user
+      @creature.destroy
+      redirect_to creatures_path 
+    else
+      "Can't do that"
+    end
   end
 
   def adopt

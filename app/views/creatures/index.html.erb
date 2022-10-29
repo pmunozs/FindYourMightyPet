@@ -6,34 +6,35 @@
 </div>
 <div class="text-container">
   <div class="d-flex align-items-center justify-content-between mb-3">
-    <h1>Mighty creatures</h1>
+    <h1>Current creatures</h1>
     <%= link_to "Add a creature", new_creature_path, class: "btn-themed-orange" %>
   </div>
   <div class="row">
     <div class="col d-flex justify-content-between flex-wrap">
       <% @creatures.each do |creature| %>
+      
         <%= link_to creature_path(creature) do %>
         <div class="creature-card col-sm-6 col-md-4 mb-3">
-        <img class="card-img-top" src="https://images4.fanpop.com/image/photos/20500000/DraGon-dragons-20577400-984-689.jpg" alt="Card image cap">
-        <div class="card-body">
+          <img class="card-img-top" src="https://source.unsplash.com/500x500/?<%= creature.name %>, scary" alt="Card image cap"> 
+          <div class="card-body">
             <div class="creature-description name">
                 <%= creature.name %>
             </div>
             <p class="creature-description age">
-                Age: <%= creature.age %> years
+                <strong>Age: <strong><%= creature.age %> years
             </p>
             <p class="creature-description ability">
-                Ability: <%= creature.ability %>
+                <strong>Ability: <strong><%= creature.ability %>
             </p>
-        </div>
-        <div class="card-footer">
-          <small class="creature-description">
+          </div>
+        
+          <div class="card-footer">
+            <small class="creature-description">
               <%= creature.description %>
-          </small>
-        </div>
+            </small>
+          </div>
         <% end %>
       </div>
-
     <% end %>
   </div>
 </div>
