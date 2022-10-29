@@ -8,3 +8,9 @@
   text-align: center;
   color: white;
 }
+
+.index-col {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
