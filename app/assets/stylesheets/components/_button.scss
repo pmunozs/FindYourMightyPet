@@ -14,13 +14,26 @@
 
 .btn-themed-orange {
   background-color: rgba($color: #C44536, $alpha: 0.7);
-  padding: 15px 25px;
+  padding: 10px 20px;
   border-radius: 10px;
-  color: #772E25;
+  color: white;
   text-decoration: none;
 }
 
 .btn-themed-orange:hover {
   background-color: rgba($color: #197278, $alpha: 0.7);
-  color: #772E25;
+  color: white;
+}
+
+.btn-themed-blue {
+  background-color: rgba($color: #197278, $alpha: 0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.btn-themed-blue:hover {
+  background-color: rgba($color: #C44536, $alpha: 0.7);
+  color: white;
 }
