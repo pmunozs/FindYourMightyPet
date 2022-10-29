@@ -13,21 +13,21 @@
     <div class="col d-flex justify-content-between flex-wrap">
       <% @creatures.each do |creature| %>
         <%= link_to creature_path(creature) do %>
-        <div class="card co-12 col-sm-6 col-md-4 mb-3">
+        <div class="creature-card col-sm-6 col-md-4 mb-3">
         <img class="card-img-top" src="https://images4.fanpop.com/image/photos/20500000/DraGon-dragons-20577400-984-689.jpg" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">
+            <div class="creature-description name">
                 <%= creature.name %>
-            </h5>
-            <p class="card-text">
-                <%= creature.age %>
+            </div>
+            <p class="creature-description age">
+                Age: <%= creature.age %> years
             </p>
-            <p class="card-text">
-                <%= creature.ability %>
+            <p class="creature-description ability">
+                Ability: <%= creature.ability %>
             </p>
         </div>
         <div class="card-footer">
-          <small class="text-muted">
+          <small class="creature-description">
               <%= creature.description %>
           </small>
         </div>
