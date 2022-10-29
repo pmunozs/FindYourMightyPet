@@ -1,0 +1,37 @@
+
+<div class="container">
+    <header>
+        <h2>My profile</h2>
+    </header>
+    <div>
+        <h3>My creatures</h3>
+                </div>
+                <div class="row">
+                    <div class="col-sm d-flex justify-content-between d-flex flex-wrap">
+                        <% @creatures.each do |creature| %>
+                            <div class="card co-12 col-sm-6 col-md-4 mb-3">
+                                <img class="card-img-top" src="https://source.unsplash.com/500x500/?<%= creature.name %>, scary" alt="Card image cap" />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <%= creature.name %>
+                                    </h5>
+                                    <p class="card-text">
+                                        <strong>Age: </strong>
+                                        <%= creature.age %>
+                                    </p>
+                                    <p class="card-text">
+                                        <strong>Ability: </strong>
+                                        <%= creature.ability %>
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">
+                                        <%= creature.description %>
+                                    </small>
+                                <%= link_to creature_path(creature) do %>
+                            </div>
+                        <% end %>
+                    </div>
+                </div>
+<% end %>
+</div>
