@@ -22,6 +22,8 @@
                     <small class="text-muted">
                         <%= creature.description %>
                     </small>
+                    <br />
+                    <%= link_to "Know more!", creature_path(creature), class: "btn btn-rainbow text-center" %>
                 </div>
             </div>
         <% end %>
