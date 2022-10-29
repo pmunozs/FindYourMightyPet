@@ -1,16 +1,16 @@
 <div class="cover mb-4 d-flex align-items-center justify-content-center">
-  <div class="text-center text-white">
+  <div>
     <h1>Adopt a mighty creature</h1>
     <h3 class="typed-js" data-controller="typed-js"></h3>
   </div>
 </div>
-<div class="container py-5">
+<div class="text-container">
   <div class="d-flex align-items-center justify-content-between mb-3">
-    <h3 class="mb-0">Mighty creatures</h3>
-    <%= link_to "Add a creature", new_creature_path, class: "btn btn-flat" %>
+    <h1>Mighty creatures</h1>
+    <%= link_to "Add a creature", new_creature_path, class: "btn-themed-orange" %>
   </div>
   <div class="row">
-    <div class="col-sm d-flex justify-content-between d-flex flex-wrap">
+    <div class="col d-flex justify-content-between flex-wrap">
       <% @creatures.each do |creature| %>
         <%= link_to creature_path(creature) do %>
         <div class="card co-12 col-sm-6 col-md-4 mb-3">
@@ -36,12 +36,4 @@
 
     <% end %>
   </div>
-</div>
-<div class="container">
-  <header>
-    <h2>Creatures</h2>
-  </header>
-  <% @creatures.each do |creature| %>
-    <% creature.name %>
-  <% end %>
 </div>
