@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   def about
   end
 
+ 
   def my_profile
     @creatures = Creature.where(user: current_user)
   end
