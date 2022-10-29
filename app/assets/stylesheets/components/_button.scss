@@ -11,3 +11,16 @@
 .btn-rainbow:hover {
   opacity: 1;
 }
+
+.btn-themed-orange {
+  background-color: rgba($color: #C44536, $alpha: 0.7);
+  padding: 15px 25px;
+  border-radius: 10px;
+  color: #772E25;
+  text-decoration: none;
+}
+
+.btn-themed-orange:hover {
+  background-color: rgba($color: #197278, $alpha: 0.7);
+  color: #772E25;
+}

@@ -1,0 +1,28 @@
+.creature-card {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  max-width: 400px;
+
+  .card-body, .card-footer {
+    margin: 10px;
+  }
+
+  .name {
+    color: #197278;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+.creature-description {
+  color: #283D3B;
+}
+
+.creature-card:hover {
+  box-shadow: 3px 3px 10px #283D3B;
+}
+
+.a {
+  text-decoration: none;
+}
