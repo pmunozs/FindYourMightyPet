@@ -1,0 +1,19 @@
+
+.image-wrapper img {
+  border-bottom-right-radius: 100%;
+  border-top-right-radius: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: calc(100vh - 16px);
+  box-shadow: 5px 0px 10px lightgray;
+}
+
+.creature-wrapper {
+  padding: 0 100px 50px 50px;
+
+}
+
+.creature-wrapper p:last-of-type {
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 30px;
+}
