@@ -1,0 +1,17 @@
+
+<div class="form-creature-container d-flex">
+        <%= simple_form_for(@creature) do |f| %>
+        <div class="form-creature-box">
+<h2><%= "Edit a mighty creature!"%></h2>
+            <%= f.input :name %>
+            <%= f.input :age %>
+            <%= f.input :ability %>
+            <%= f.input :description %>
+            <%= f.submit class: 'btn btn-primary'  %>
+        </div>
+        <% end %>
+    <img class="img-display" src="https://preview.redd.it/9yvito5n7x161.png?width=960&crop=smart&auto=webp&s=0657a1e629412eed14e1443942d3734aa0c81409" alt="Card image cap">
+</div>
+
+
+
