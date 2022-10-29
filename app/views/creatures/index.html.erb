@@ -12,6 +12,7 @@
   <div class="row">
     <div class="col index-col">
       <% @creatures.each do |creature| %>
+
         <div class="card co-12 col-sm-6 col-md-4 mb-3">
 
         <%= link_to creature_path(creature), class:"link" do %>
@@ -28,6 +29,7 @@
                 <strong>Ability: </strong><%= creature.ability %>
               </div>
             </div>
+
             <div class="card-footer">
               <div class="creature-description">
                 <%= creature.description %>
