@@ -10,31 +10,31 @@
     <%= link_to "Add a creature", new_creature_path, class: "btn-themed-orange" %>
   </div>
   <div class="row">
-    <div class="col d-flex justify-content-between flex-wrap">
+    <div class="col index-col">
       <% @creatures.each do |creature| %>
-      
         <%= link_to creature_path(creature) do %>
-        <div class="creature-card col-sm-6 col-md-4 mb-3">
-          <img class="card-img-top" src="https://source.unsplash.com/500x500/?<%= creature.name %>, scary" alt="Card image cap"> 
-          <div class="card-body">
-            <div class="creature-description name">
+          <div class="creature-card">
+            <img class="card-img-top" src="https://source.unsplash.com/400x400/?<%= creature.name %>, scary" alt="Card image cap">
+            <div class="card-body">
+              <div class="creature-description name">
                 <%= creature.name %>
+              </div>
+              <div class="creature-description age">
+                <strong>Age: </strong><%= creature.age %> years
+              </div>
+              <div class="creature-description ability">
+                <strong>Ability: </strong><%= creature.ability %>
+              </div>
             </div>
-            <p class="creature-description age">
-                <strong>Age: <strong><%= creature.age %> years
-            </p>
-            <p class="creature-description ability">
-                <strong>Ability: <strong><%= creature.ability %>
-            </p>
-          </div>
-        
-          <div class="card-footer">
-            <small class="creature-description">
-              <%= creature.description %>
-            </small>
+
+            <div class="card-footer">
+              <div class="creature-description">
+                <%= creature.description %>
+              </div>
+            </div>
           </div>
         <% end %>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
