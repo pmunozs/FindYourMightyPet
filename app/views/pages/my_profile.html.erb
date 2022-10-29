@@ -1,37 +1,36 @@
 
 <div class="container">
     <header>
-        <h2>My profile</h2>
+        <h4>My creatures</h4>
     </header>
     <div>
-        <h3>My creatures</h3>
-                </div>
-                <div class="row">
-                    <div class="col-sm d-flex justify-content-between d-flex flex-wrap">
-                        <% @creatures.each do |creature| %>
-                            <div class="card co-12 col-sm-6 col-md-4 mb-3">
-                                <img class="card-img-top" src="https://source.unsplash.com/500x500/?<%= creature.name %>, scary" alt="Card image cap" />
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <%= creature.name %>
-                                    </h5>
-                                    <p class="card-text">
-                                        <strong>Age: </strong>
-                                        <%= creature.age %>
-                                    </p>
-                                    <p class="card-text">
-                                        <strong>Ability: </strong>
-                                        <%= creature.ability %>
-                                    </p>
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-muted">
-                                        <%= creature.description %>
-                                    </small>
-                                <%= link_to creature_path(creature) do %>
-                            </div>
-                        <% end %>
-                    </div>
-                </div>
-<% end %>
+  </div>
+  <div class="row">
+    <div class="col index-col">
+      <% @creatures.each do |creature| %>
+        <%= link_to creature_path(creature), class:"link" do %>
+          <div class="creature-card">
+            <img class="card-img-top" src="https://source.unsplash.com/400x400/?<%= creature.name %>, scary" alt="Card image cap">
+            <div class="card-body">
+              <div class="creature-description name">
+                <%= creature.name %>
+              </div>
+              <div class="creature-description age">
+                <strong>Age: </strong><%= creature.age %> years
+              </div>
+              <div class="creature-description ability">
+                <strong>Ability: </strong><%= creature.ability %>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <div class="creature-description">
+                <%= creature.description %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
 </div>
+ 
