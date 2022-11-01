@@ -1,0 +1,10 @@
+<%= form_with url: creatures_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a creature"
+  %>
+  <%= submit_tag "Search", class: "btn btn-outline-secondary justify-content-between" %>
+<% end %>
+
+
