@@ -9,6 +9,8 @@
       <%= render "shared/searchbar"  %>
       <li class="nav-item active">
         <%= link_to "Home", root_path, class: "nav-link mx-2 active" %>
+      <li class="nav-item">
+        <%= link_to "Home", root_path, class: "nav-link mx-2" %>
       </li>
       <li class="nav-item">
         <%= link_to "Creatures", creatures_path, class: "nav-link mx-2" %>
@@ -16,21 +18,13 @@
       <li class="nav-item">
         <%= link_to "About", about_path, class: "nav-link mx-2" %>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Profile
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <% if user_signed_in? %>
-            <li><%= link_to "Profile", root_path, class: "dropdown-item" %></li>
-            <li><%= link_to "My profile", my_profile_path, class: "dropdown-item" %></li>
-            <li><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %></li>
-          <% else  %>
-            <li><%= link_to "Login", new_user_session_path, class: "dropdown-item" %></li>
-            <li><%= link_to "Signup", new_user_registration_path, class: "dropdown-item" %></li>
-          <% end %>
-        </ul>
-      </li>
+      <% if user_signed_in? %>
+        <li  class="nav-item"><%= link_to "My profile", my_profile_path, class: "nav-link mx-2" %></li>
+        <li class="nav-item"><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-link mx-2" %></li>
+      <% else  %>
+        <li class="nav-item"><%= link_to "Login", new_user_session_path, class: "nav-link mx-2" %></li>
+        <li class="nav-item"><%= link_to "Signup", new_user_registration_path, class: "nav-link mx-2" %></li>
+      <% end %>
     </ul>
   </div>
 </div>

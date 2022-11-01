@@ -19,18 +19,15 @@
               <div class="creature-description name">
                 <%= creature.name %>
               </div>
-              <div class="creature-description age">
+              <div class="creature-description">
                 <strong>Age: </strong><%= creature.age %> years
               </div>
-              <div class="creature-description ability">
+              <div class="creature-description">
                 <strong>Ability: </strong><%= creature.ability %>
               </div>
             </div>
-
             <div class="card-footer">
-              <div class="creature-description">
-                <%= creature.description %>
-              </div>
+              <%= creature.description %>
             </div>
           </div>
         <% end %>
