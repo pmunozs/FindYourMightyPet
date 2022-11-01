@@ -3,6 +3,7 @@
     <h1>My Profile</h1>
   </div>
 </div>
+<% flash.now[:notice] = params[:flash_notice] if params[:flash_notice] %>
 <div class="text-container mt-4 mb-4">
   <div><h3>My creatures</h3></div>
   <div class="row">
