@@ -1,7 +1,7 @@
 <div class="row align-items-center w-100">
   <div class="col-4">
     <div class="image-wrapper">
-      <img src="https://source.unsplash.com/500x500/?<%= @creature.name %>, scary" alt="Card image cap" width="500" />
+      <%= cl_image_tag @creature.photo.key, width: 500, crop: :fill %>
     </div>
   </div>
   <div class="col-8">

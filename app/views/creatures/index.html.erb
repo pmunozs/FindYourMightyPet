@@ -14,7 +14,8 @@
       <% @creatures.each do |creature| %>
         <%= link_to creature_path(creature), class:"link" do %>
           <div class="creature-card">
-            <img class="card-img-top" src="https://source.unsplash.com/400x400/?<%= creature.name %>, scary" alt="Card image cap">
+            <%= cl_image_tag creature.photo.key, height: 400, width: 400, class: 'card-img-top', crop: :fill %>
+            <!-- <img class="card-img-top" src="https://source.unsplash.com/400x400/?<%= creature.name %>, scary" alt="Card image cap"> -->
             <div class="card-body">
               <div class="creature-description name">
                 <%= creature.name %>

@@ -9,7 +9,8 @@
     <% @creatures.each do |creature| %>
       <div class="col-sm d-flex justify-content-between d-flex flex-wrap">
         <div class="card co-12 col-sm-6 col-md-4 mb-3">
-            <img class="card-img-top" src="https://source.unsplash.com/500x500/?<%= creature.name %>, scary" alt="Card image cap" />
+            <%= cl_image_tag creature.photo.key, class: 'card-img-top', crop: :fill %>
+            <!-- <img class="card-img-top" src="https://source.unsplash.com/500x500/?<%= creature.name %>, scary" alt="Card image cap" /> -->
             <div class="card-body">
                 <h5 class="card-title">
                     <%= creature.name %>
