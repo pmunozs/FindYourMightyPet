@@ -55,6 +55,17 @@ class CreaturesController < ApplicationController
     @user = current_user
     @creature = Creature.find(params[:creature_id])
     @creature.user = @user
+    @creature.adopted = !@creature.adopted # flop the status
+    @creature.save
+    if @creature.adopted
+      flash[:notice] = "Congatulations on your adoption of #{@creature.name}!"
+    end
+    redirect_to creature_path(@creature)
+  end
+
+  def flop
+    creature = Creature.find(params[:id])
+
   end
 
   private

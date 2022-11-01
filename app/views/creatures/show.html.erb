@@ -10,7 +10,7 @@
       <p><strong>Age: </strong><%= @creature.age %></p>
       <p><strong>Ability: </strong><%= @creature.ability %></p>
       <p><%= @creature.description %></p>
-      <%= link_to "Adopt!", creature_adopt_path(@creature), class: "btn-themed-orange" %>
+      <%=link_to (@creature.adopted ? "Adopted" : "Adopt"), creature_adopt_path(@creature), class: "btn-themed-orange" %>
       <% if @creature.user == current_user %>
         <%= link_to "Edit", edit_creature_path(@creature), class: "btn-themed-orange" %>
         <%= link_to "Release", creature_path(@creature), class: "btn-themed-orange", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" } %>
