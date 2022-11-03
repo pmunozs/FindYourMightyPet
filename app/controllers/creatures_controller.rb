@@ -6,6 +6,12 @@ class CreaturesController < ApplicationController
     else
       @creatures = Creature.all
     end
+    @markers = @creatures.geocoded.map do |creature|
+      {
+        lat: creature.latitude,
+        lng: creature.longitude
+      }
+    end
   end
 
   def new
@@ -31,7 +37,7 @@ class CreaturesController < ApplicationController
     if @creature.user == current_user
     else
       puts "Can't do that"
-      redirect_to creatures_path 
+      redirect_to creatures_path
     end
   end
 
@@ -45,7 +51,7 @@ class CreaturesController < ApplicationController
     @creature = Creature.find(params[:id])
     if @creature.user == current_user
       @creature.destroy
-      redirect_to creatures_path 
+      redirect_to creatures_path
     else
       "Can't do that"
     end
