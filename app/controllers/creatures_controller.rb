@@ -6,6 +6,12 @@ class CreaturesController < ApplicationController
     else
       @creatures = Creature.all
     end
+    @markers = @creatures.geocoded.map do |creature|
+      {
+        lat: creature.latitude,
+        lng: creature.longitude
+      }
+    end
   end
 
   def new

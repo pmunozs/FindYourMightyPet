@@ -12,7 +12,6 @@ puts 'Clearing you database...'
 Creature.destroy_all
 User.destroy_all
 
-
 puts 'Seeding...'
 
 3.times do |i|
@@ -28,7 +27,8 @@ redPowerRanger = Creature.new(name: 'Red Ranger',
   age: 32,
   ability: 'Leader of the Power Rangers. Can call a dinosaur',
   description: 'The Red Ranger is usually the leader of the team, although there have been times where Rangers of other colors have been leaders. In recent times, Red Rangers have also been given the role of hot-headed rookie. Red Rangers also usually receive the most powerful weapons. The Red Ranger\'s main weapon traditionally is a sword, but some have used blasters.',
-  user: User.first
+  user: User.first,
+  address: "5 North Park, London"
 )
 redPowerRanger.photo.attach(io: file, filename: "red-ranger.jpg", content_type: "image/jpg")
 redPowerRanger.save
@@ -40,7 +40,8 @@ yellowRanger = Creature.new(name: 'Yellow Ranger',
   age: 25,
   ability: 'Like the Red Ranger but Yellow!',
   description:'The Yellow Ranger is usually a subordinate member of the team and are usually the teams\' morale boosters (with the exception of Taylor who once was the Wild Force Rangers\' leader before Cole\'s arrival and a rather strong-willed individual) or level-headed in the time of crisis.',
-  user: User.last
+  user: User.last,
+  address: "9 Horseguards, Exeter"
 )
 yellowRanger.photo.attach(io: file, filename: "yellow-ranger.jpg", content_type: "image/jpg")
 yellowRanger.save
@@ -53,7 +54,8 @@ pennywise = Creature.new(
   age: 1500,
   ability: 'Being evil. Also the name for a punk rock band.',
   description:'Pennywise has two weaknesses, and those who can see him need to know what it is to overcome this terrifying entity. Bloody-Disgusting says that the two fears of It are courage and heart. In the films, the characters who survive are those who have shown both of these traits.',
-  user: User.last
+  user: User.last,
+  address: "1 Windor Close, Exeter"
 )
 pennywise.photo.attach(io: file, filename: "pennywise.jpg", content_type: "image/jpg")
 pennywise.save
@@ -66,7 +68,8 @@ pennywise = Creature.new(
   age: 750,
   ability: 'Makes rainbows out of the horn',
   description:'The unicorn is a legendary creature that has been described since antiquity as a beast with a single large, pointed, spiraling horn projecting from its forehead.',
-  user: User.first
+  user: User.first,
+  address: "34 Balcaskie Road, London"
 )
 pennywise.photo.attach(io: file, filename: "unicorn.jpg", content_type: "image/jpg")
 pennywise.save
@@ -80,7 +83,8 @@ hippogriff = Creature.new(
   age: 2576,
   ability: 'Can fly but also run fast',
   description: 'This particular creature was owned by Harry Potter.',
-  user: User.first
+  user: User.first,
+  address: "Oddley Lane, Saunderton"
 )
 hippogriff.photo.attach(io: file, filename: "hippogriff.jpg", content_type: "image/jpg")
 hippogriff.save
@@ -93,7 +97,8 @@ jumanji = Creature.new(
   age: 120,
   ability: 'Can jump out of board games',
   description: 'After Alan inadvertently rolls a five, a message tells him to wait in a jungle until someone rolls a five or eight, and he is sucked into the game. Afterwards, a swarm of bats appears and chases Sarah out of the mansion.',
-  user: User.last
+  user: User.last,
+  address: "Old College, South Bridge, Edinburgh, EH8 9YL"
 )
 jumanji.photo.attach(io: file, filename: "jumanji.jpg", content_type: "image/jpg")
 jumanji.save
