@@ -13,5 +13,8 @@ Creature.destroy_all
   Creature.create(name: Faker::TvShows::Supernatural.creature,
                   age: Faker::Number.within(range: 1..10_000),
                   ability: Faker::Superhero.power,
-                  description: Faker::Restaurant.review)
+                  description: Faker::Restaurant.review,
+                  user: User.first,
+                  address: ["5 North Park, London", "1 Windsor Close, Exeter", "Redfield House, Saunderton",
+                            "34 Balcaskie Road, London", "10 Torriano Avenue, London", "9 Horseguards, Exeter"].sample)
 end
