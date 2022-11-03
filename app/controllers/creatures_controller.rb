@@ -31,7 +31,7 @@ class CreaturesController < ApplicationController
     if @creature.user == current_user
     else
       puts "Can't do that"
-      redirect_to creatures_path 
+      redirect_to creatures_path
     end
   end
 
@@ -45,7 +45,7 @@ class CreaturesController < ApplicationController
     @creature = Creature.find(params[:id])
     if @creature.user == current_user
       @creature.destroy
-      redirect_to creatures_path 
+      redirect_to creatures_path
     else
       "Can't do that"
     end
@@ -71,7 +71,7 @@ class CreaturesController < ApplicationController
   private
 
   def creature_params
-    params.require(:creature).permit(:name, :age, :ability, :description)
+    params.require(:creature).permit(:name, :age, :ability, :description, :photo)
   end
 
 end

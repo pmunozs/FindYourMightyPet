@@ -7,11 +7,9 @@
             <%= f.input :age %>
             <%= f.input :ability %>
             <%= f.input :description %>
+            <%= f.input :photo, as: :file %>
             <%= f.submit class: 'btn btn-primary'  %>
         </div>
         <% end %>
-    <img class="img-display" src="https://preview.redd.it/9yvito5n7x161.png?width=960&crop=smart&auto=webp&s=0657a1e629412eed14e1443942d3734aa0c81409" alt="Card image cap">
+    <%= cl_image_tag @creature.photo.key, width: 500, class: 'img-display', crop: :fill %>
 </div>
-
-
-
