@@ -3,32 +3,27 @@
     <h3 class="text-center">Latest creatures</h3>
     <div class="col-sm col-4 d-flex justify-content-between">
         <% @creatures.last(3).each do |creature| %>
-            <div class="card m-4 w-100">
-                <%= cl_image_tag creature.photo.key, class: 'card-img-top', crop: :fill %>
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <%= creature.name %>
-                    </h5>
-                    <p class="card-text">
-                        <strong>Age: </strong>
-                        <%= creature.age %>
-                    </p>
-                    <p class="card-text">
-                        <strong>Ability: </strong>
-                        <%= creature.ability %>
-                    </p>
+          <%= link_to creature_path(creature), class:"link" do %>
+            <div class="creature-card">
+              <%= cl_image_tag creature.photo.key, height: 400, width: 400, class: 'card-img-top', crop: :fill %>
+              <div class="card-body">
+                <div class="creature-description name">
+                  <%= creature.name %>
                 </div>
-                <div class="card-footer">
-                    <small class="text-muted">
-                        <%= creature.description %>
-                    </small>
-                    <br>
-                    <br />
-                    <%= link_to "Know more!", creature_path(creature), class: "btn-themed-orange text-center" %>
-                    <br>
-                    <br />
+                <div class="creature-description age">
+                  <strong>Age: </strong><%= creature.age %> years
                 </div>
+                <div class="creature-description ability">
+                  <strong>Ability: </strong><%= creature.ability %>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="creature-description">
+                  <%= creature.description %>
+                </div>
+              </div>
             </div>
+          <% end %>
         <% end %>
     </div>
   </div>
