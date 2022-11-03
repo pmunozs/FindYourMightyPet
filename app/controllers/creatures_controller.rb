@@ -10,7 +10,8 @@ class CreaturesController < ApplicationController
       {
         lat: creature.latitude,
         lng: creature.longitude,
-        info_window: render_to_string(partial: "info_window", locals: {flat: flat})
+        info_window: render_to_string(partial: "info_window", locals: {creature: creature}),
+        image_url: helpers.asset_url("map-icon.png")
       }
     end
   end
