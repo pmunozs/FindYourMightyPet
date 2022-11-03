@@ -9,7 +9,9 @@ class CreaturesController < ApplicationController
     @markers = @creatures.geocoded.map do |creature|
       {
         lat: creature.latitude,
-        lng: creature.longitude
+        lng: creature.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {creature: creature}),
+        image_url: helpers.asset_url("map-icon.png")
       }
     end
   end
@@ -34,8 +36,7 @@ class CreaturesController < ApplicationController
 
   def edit
     @creature = Creature.find(params[:id])
-    if @creature.user == current_user
-    else
+    unless @creature.user == current_user
       puts "Can't do that"
       redirect_to creatures_path
     end
@@ -71,7 +72,6 @@ class CreaturesController < ApplicationController
 
   def flop
     creature = Creature.find(params[:id])
-
   end
 
   private
@@ -79,5 +79,4 @@ class CreaturesController < ApplicationController
   def creature_params
     params.require(:creature).permit(:name, :age, :ability, :description, :photo)
   end
-
 end
