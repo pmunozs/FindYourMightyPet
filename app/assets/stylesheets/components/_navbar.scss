@@ -15,3 +15,13 @@
   background-color: #283D3B;
   color: white;
 }
+
+.custom {
+  color: white !important;
+  border-radius: 5px;
+}
+
+.custom:hover {
+  background-color: white !important;
+  color: #C44536 !important;
+}
