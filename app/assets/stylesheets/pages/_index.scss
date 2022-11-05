@@ -19,3 +19,8 @@
 .link {
   text-decoration: none;
 }
+
+.fixed-height {
+
+  min-height: calc(100vh - 232px);
+}
