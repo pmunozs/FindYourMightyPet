@@ -72,6 +72,7 @@ class CreaturesController < ApplicationController
 
   def flop
     creature = Creature.find(params[:id])
+    return creature
   end
 
   private
