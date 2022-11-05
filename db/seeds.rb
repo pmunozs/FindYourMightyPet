@@ -55,7 +55,7 @@ pennywise = Creature.new(
   ability: 'Being evil. Also the name for a punk rock band.',
   description:'Pennywise has two weaknesses, and those who can see him need to know what it is to overcome this terrifying entity. Bloody-Disgusting says that the two fears of It are courage and heart. In the films, the characters who survive are those who have shown both of these traits.',
   user: User.last,
-  address: "1 Windor Close, Exeter"
+  address: "Neue Grünstraße 20, 10179 Berlin"
 )
 pennywise.photo.attach(io: file, filename: "pennywise.jpg", content_type: "image/jpg")
 pennywise.save
