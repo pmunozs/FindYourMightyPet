@@ -8,7 +8,7 @@
 require 'faker'
 require "open-uri"
 
-puts 'Clearing you database...'
+puts 'Clearing your database...'
 Creature.destroy_all
 User.destroy_all
 
@@ -28,7 +28,7 @@ redPowerRanger = Creature.new(name: 'Red Ranger',
   ability: 'Leader of the Power Rangers. Can call a dinosaur',
   description: 'The Red Ranger is usually the leader of the team, although there have been times where Rangers of other colors have been leaders. In recent times, Red Rangers have also been given the role of hot-headed rookie. Red Rangers also usually receive the most powerful weapons. The Red Ranger\'s main weapon traditionally is a sword, but some have used blasters.',
   user: User.first,
-  address: "5 North Park, London"
+  address: "College Green, Dublin 2, Ireland"
 )
 redPowerRanger.photo.attach(io: file, filename: "red-ranger.jpg", content_type: "image/jpg")
 redPowerRanger.save
@@ -38,7 +38,7 @@ file.close()
 file = URI.open("https://www.thechosenprime.com/thumbnail.asp?file=assets/images/other/super7/power%20rangers/ultimates/s7upr-yellow-ranger-04.jpg&maxx=600&maxy=0")
 yellowRanger = Creature.new(name: 'Yellow Ranger',
   age: 25,
-  ability: 'Like the Red Ranger but Yellow!',
+  ability: 'Like the Red Power Ranger but Yellow!',
   description:'The Yellow Ranger is usually a subordinate member of the team and are usually the teams\' morale boosters (with the exception of Taylor who once was the Wild Force Rangers\' leader before Cole\'s arrival and a rather strong-willed individual) or level-headed in the time of crisis.',
   user: User.last,
   address: "9 Horseguards, Exeter"
@@ -55,7 +55,7 @@ pennywise = Creature.new(
   ability: 'Being evil. Also the name for a punk rock band.',
   description:'Pennywise has two weaknesses, and those who can see him need to know what it is to overcome this terrifying entity. Bloody-Disgusting says that the two fears of It are courage and heart. In the films, the characters who survive are those who have shown both of these traits.',
   user: User.last,
-  address: "1 Windor Close, Exeter"
+  address: "Neue Grünstraße 20, 10179 Berlin"
 )
 pennywise.photo.attach(io: file, filename: "pennywise.jpg", content_type: "image/jpg")
 pennywise.save

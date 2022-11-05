@@ -1,0 +1,22 @@
+.info-box {
+  background-color:#197278;
+  min-height: 150px;
+  width: 200px;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+}
+
+.info-link {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+  border-radius: 3px;
+
+  &:hover {
+    color: #197278;
+    background-color: white;
+  }
+}
