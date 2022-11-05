@@ -3,7 +3,7 @@ class Creature < ApplicationRecord
   geocoded_by :address
   after_validation :geocode
 
-  validates :name, presence: true
+  validates :name, :age, :ability, :description, :address, presence: true
 
   has_one_attached :photo
 
