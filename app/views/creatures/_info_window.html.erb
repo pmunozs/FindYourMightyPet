@@ -1,2 +1,5 @@
-<h2><%= creature.name %></h2>
-<p><%= creature.address %></p>
+<div class="info-box">
+  <h2><%= creature.name %></h2>
+  <p><%= creature.address %></p>
+  <%= link_to "Check them out!", creature_path(creature), class:"info-link" %>
+</div>
