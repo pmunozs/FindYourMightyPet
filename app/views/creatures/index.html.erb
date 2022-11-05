@@ -6,35 +6,33 @@
 </div>
 <div class="text-container">
   <div class="d-flex align-items-center justify-content-between mb-3">
-    <h1>Available creatures</h1>
+    <h1>Current creatures</h1>
     <%= link_to "Add a creature", new_creature_path, class: "btn-themed-orange" %>
   </div>
   <div class="row">
     <div class="col index-col">
       <% @creatures.each do |creature| %>
-        <% if !creature.adopted  %>
-          <%= link_to creature_path(creature), class:"link" do %>
-            <div class="creature-card">
-              <%= cl_image_tag creature.photo.key, height: 400, width: 400, class: 'card-img-top', crop: :fill %>
-              <div class="card-body">
-                <div class="creature-description name">
-                  <%= creature.name %>
-                </div>
-                <div class="creature-description age">
-                  <strong>Age: </strong><%= creature.age %> years
-                </div>
-                <div class="creature-description ability">
-                  <strong>Ability: </strong><%= creature.ability %>
-                </div>
+        <%= link_to creature_path(creature), class:"link" do %>
+          <div class="creature-card">
+            <%= cl_image_tag creature.photo.key, height: 400, width: 400, class: 'card-img-top', crop: :fill %>
+            <div class="card-body">
+              <div class="creature-description name">
+                <%= creature.name %>
               </div>
-              <div class="card-footer">
-                <div class="creature-description">
-                  <%= creature.description %>
-                </div>
+              <div class="creature-description age">
+                <strong>Age: </strong><%= creature.age %> years
+              </div>
+              <div class="creature-description ability">
+                <strong>Ability: </strong><%= creature.ability %>
               </div>
             </div>
-          <% end %>
-      <% end %>
+            <div class="card-footer">
+              <div class="creature-description">
+                <%= creature.description %>
+              </div>
+            </div>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>
